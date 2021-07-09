@@ -10,6 +10,18 @@ repositories {
     mavenCentral()
 }
 
+java {
+    // generate a jar with complete source from this repo
+    withSourcesJar()
+    // generate a jar with html files for javadocs from this repo
+    withJavadocJar()
+}
+
+compileJava {
+    // warn everything except switch case fallthrough
+    options.compilerArgs << "-Xlint:all" << "-Xlint:-fallthrough"
+}
+
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
@@ -20,5 +32,12 @@ test {
 }
 
 jar {
-
+    manifest {
+        attributes(
+                'Version': "$archiveVersion",
+                'Created-By': "Gradle ${gradle.gradleVersion}",
+                'Build-Jdk': "${System.properties['java.version']} (${System.properties['java.vendor']} ${System.properties['java.vm.version']})",
+                'Build-OS': "${System.properties['os.name']} ${System.properties['os.arch']} ${System.properties['os.version']}"
+        )
+    }
 }

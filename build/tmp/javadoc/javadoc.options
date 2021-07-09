@@ -1,0 +1,7 @@
+-classpath 'C:\\Users\\krish\\Documents\\coco\\JitPackTest\\build\\classes\\java\\main;C:\\Users\\krish\\Documents\\coco\\JitPackTest\\build\\resources\\main'
+-d 'C:\\Users\\krish\\Documents\\coco\\JitPackTest\\build\\docs\\javadoc'
+-doctitle 'JitPackTest 0.0.1 API'
+-notimestamp 
+-quiet 
+-windowtitle 'JitPackTest 0.0.1 API'
+'C:\\Users\\krish\\Documents\\coco\\JitPackTest\\src\\main\\java\\org\\example\\api\\Doubler.java'
