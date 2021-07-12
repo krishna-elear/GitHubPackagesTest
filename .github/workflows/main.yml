@@ -22,12 +22,6 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # print pwd
-      - name: Hello
-        run: ls
-
-      - name: Change gradlew permissions
-        run: chmod +x ./gradlew
 
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout to branch
@@ -39,6 +33,15 @@ jobs:
         with:
           java-version: '8'
           distribution: 'adopt'
+
+      # print the info of cwd
+      - name: Hello
+        run: |
+          pwd
+          ls
+
+      - name: Change gradlew permissions
+        run: chmod +x ./gradlew
 
       # Build all .jars
       - name: Run gradlew
