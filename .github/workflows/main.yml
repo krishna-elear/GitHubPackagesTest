@@ -24,9 +24,7 @@ jobs:
     steps:
       # print pwd
       - name: Hello
-        run: |
-          pwd
-          ls
+        run: ls
 
       - name: Change gradlew permissions
         run: chmod +x ./gradlew
