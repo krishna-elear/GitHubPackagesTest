@@ -1,6 +1,0 @@
-Manifest-Version: 1.0
-Build-OS: Windows 10 amd64 10.0
-Version: task ':jar' property 'archiveVersion'
-Created-By: Gradle 7.1.1
-Build-Jdk: 1.8.0_261 (Oracle Corporation 25.261-b12)
-

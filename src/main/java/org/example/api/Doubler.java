@@ -1,24 +1,26 @@
 package org.example.api;
 
 /**
- * A class to double int
+ * A class to double int.
  */
 public class Doubler {
-    private final int a;
+  private final int number;
 
-    /**
-     * Create a doubler instance
-     * @param a The number to double
-     */
-    public Doubler(int a) {
-        this.a = a;
-    }
+  /**
+   * Create a doubler instance.
+   *
+   * @param number The number to double.
+   */
+  public Doubler(int number) {
+    this.number = number;
+  }
 
-    /**
-     * Function to double the number provided in constructor
-     * @return The doubled number
-     */
-    public int doubleIt() {
-        return 2 * a;
-    }
+  /**
+   * Function to double the number provided in constructor.
+   *
+   * @return The doubled number.
+   */
+  public int doubleIt() {
+    return 2 * number;
+  }
 }
