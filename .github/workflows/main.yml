@@ -50,7 +50,7 @@ jobs:
           ./gradlew sourcesJar
           ./gradlew javadocJar
 
-      - name: Run publish
+      - name: Publish
         env:
           GITHUB_ACTOR: ${{ github.actor }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
