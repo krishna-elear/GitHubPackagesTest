@@ -64,6 +64,8 @@ publishing {
 
     publications {
         gpr(MavenPublication) {
+            artifactId "$rootProject.name".toLowerCase()
+
             from components.java
         }
     }
