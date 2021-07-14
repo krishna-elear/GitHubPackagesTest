@@ -50,6 +50,13 @@ jobs:
           ./gradlew sourcesJar
           ./gradlew javadocJar
 
+      - name: Run publish
+        env:
+          GITHUB_ACTOR: ${{ github.actor }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          ./gradlew publish
+
       - name: Upload Artifacts
         uses: actions/upload-artifact@v2
         with:
